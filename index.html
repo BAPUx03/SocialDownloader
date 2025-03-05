@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Downloader</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="back-btn" onclick="goBack()">
+                <i class="fas fa-arrow-left"></i>
+                Back
+            </div>
+            <div class="theme-toggle" onclick="toggleTheme()">🌓</div>
+        </div>
+
+        <!-- Homepage -->
+        <div id="homepage">
+            <h1>Social Downloader</h1>
+            <div class="platform-buttons">
+                <button class="platform-btn" onclick="showSection('instagram')">
+                    <i class="fab fa-instagram"></i>
+                    Instagram
+                </button>
+                <button class="platform-btn" onclick="showSection('youtube')">
+                    <i class="fab fa-youtube"></i>
+                    YouTube
+                </button>
+            </div>
+
+            <div class="feature-card">
+                <img src="images/bg-remove.png" alt="BG Remove" class="feature-image">
+                <div>
+                    <h2>One Click Background Remover</h2>
+                    <p>Remove image backgrounds instantly with AI-powered technology</p>
+                    <a href="https://bapux03.github.io/background-remover/" target="_blank" class="visit-btn">
+                        Visit Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Instagram Section -->
+        <div id="instagram-section" class="download-section">
+            <h2><i class="fab fa-instagram"></i> Instagram Video Downloader</h2>
+            <div class="animated-arrow">↓</div>
+            <div class="input-group">
+                <input type="text" id="instagram-url" placeholder="Paste Instagram link here...">
+                <button class="submit-btn" onclick="handleInstagramDownload()">Download</button>
+            </div>
+        </div>
+
+        <!-- YouTube Section -->
+        <div id="youtube-section" class="download-section">
+            <h2><i class="fab fa-youtube"></i> YouTube Video Downloader</h2>
+            <div class="animated-arrow">↓</div>
+            <div class="input-group">
+                <input type="text" id="youtube-url" placeholder="Paste YouTube link here...">
+                <button class="submit-btn" onclick="handleYoutubeDownload()">Download</button>
+            </div>
+        </div>
+
+        <!-- Loading -->
+        <div class="loader"></div>
+
+        <!-- Download Button -->
+        <div id="download-button" style="display: none; text-align: center;">
+            <a id="download-link" target="_blank">
+                <button class="platform-btn">Download Now</button>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>This website is built by BAPUx03 - <a href="https://github.com/BAPUx03" target="_blank">GitHub</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
